@@ -11,3 +11,6 @@ python manage.py create_user user@example.com password123 --phone "+1234567890" 
 * `--city`: Город пользователя (необязательный аргумент).
 * `--avatar`: Путь к изображению аватара пользователя (необязательный аргумент).
 * `--tg_chat_id`: ID чата в Телеграм пользователя (необязательный аргумент).
+
+celery -A config worker --loglevel=info
+celery -A config beat --loglevel=info
